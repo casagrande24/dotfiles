@@ -1,0 +1,77 @@
+# vim: set ft=sh:
+
+#--------------------------------------------------
+# Environment Variables
+#--------------------------------------------------
+
+# TMP and TEMP are defined in the Windows environment.  Leaving
+# them set to the default Windows temporary directory can have
+# unexpected consequences.
+unset TMP
+unset TEMP
+
+# Alternatively, set them to the Cygwin temporary directory
+# or to any other tmp directory of your choice
+# export TMP=/tmp
+# export TEMP=/tmp
+
+# Or use TMPDIR instead
+# export TMPDIR=/tmp
+
+# less
+export LESSCHARSET=dos
+
+#--------------------------------------------------
+# Prompt setting
+#--------------------------------------------------
+if [ $TERM == "cygwin" ]; then
+  PS1=$'\\[\\033]0;\\w\\007\n\\033[32m\\]\\! \\h \\[\\033[33m\\w\\033[0m\\]\n$ '
+fi
+
+
+#--------------------------------------------------
+# Shell Options
+#--------------------------------------------------
+
+#--------------------------------------------------
+# Completion options
+#--------------------------------------------------
+complete -f -W '/exports /symbols /headers' dumpbin
+
+#--------------------------------------------------
+# History Options
+#--------------------------------------------------
+
+
+#--------------------------------------------------
+# Aliases
+#--------------------------------------------------
+alias start='cygstart'
+alias cmd='cygstart cmd.exe'
+alias exp='cygstart .'
+
+alias ls="ls -h --show-control-chars --color=auto"
+
+alias wm='cygstart /cygdrive/c/Program\ Files/WinMerge/WinMergeU.exe'
+alias paste="/cygdrive/c/bin/cpf -po"
+alias jp="javap -classpath ."
+alias hex="hexdump.exe -C"
+
+# quick chdir
+alias temp='cd /cygdrive/c/Temp'
+
+#--------------------------------------------------
+# Functions
+#--------------------------------------------------
+
+# e.g.) wm `w <path1>` `w <path2>`
+function w() { cygpath -w $1; }
+
+function terapad() { \
+  cygstart "/cygdrive/c/Program Files/TeraPad/TeraPad.exe" `cygpath -aw $*`;
+}
+
+function vivi() { \
+  cygstart "/cygdrive/c/Program Files/ViVi/vivi.exe" -notray `cygpath -aw $*`;
+}
+

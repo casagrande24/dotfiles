@@ -1,0 +1,6 @@
+# vim: set ft=sh:
+
+RCDIR=$RCROOT/parts
+
+. $RCDIR/android.sh >& /dev/null
+

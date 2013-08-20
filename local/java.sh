@@ -1,0 +1,2 @@
+JAVA_PATH=`cygpath -up "$JAVA_HOME/bin"`
+PATH=$PATH:$JAVA_PATH
