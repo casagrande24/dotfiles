@@ -50,7 +50,7 @@ alias start='cygstart'
 alias cmd='cygstart cmd.exe'
 alias exp='cygstart .'
 
-alias ls="ls -h --show-control-chars --color=auto"
+alias ls="ls -hp --show-control-chars --color=auto"
 
 alias wm='cygstart /cygdrive/c/Program\ Files/WinMerge/WinMergeU.exe'
 alias paste="/cygdrive/c/bin/cpf -po"
