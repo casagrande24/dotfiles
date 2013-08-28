@@ -2,8 +2,5 @@
 
 RCDIR=$RCROOT/local
 
-. $RCDIR/general.sh >& /dev/null
-. $RCDIR/android.sh >& /dev/null
-. $RCDIR/imadoco.sh >& /dev/null
-. $RCDIR/msvc2005.sh >& /dev/null
+#. $RCDIR/general.sh >& /dev/null
 
