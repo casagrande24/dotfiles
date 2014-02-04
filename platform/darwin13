@@ -4,6 +4,8 @@
 # Environment Variables
 #--------------------------------------------------
 export LSCOLORS="ExFxCxDxBxEgEdabagacad"
+export SVN_EDITOR="mvim -f"
+export GIT_EDITOR="mvim -f"
 
 #--------------------------------------------------
 # Prompt setting

@@ -2,5 +2,6 @@
 
 RCDIR=$RCROOT/parts
 
+. $RCDIR/dev.sh >& /dev/null
 . $RCDIR/android.sh >& /dev/null
 
