@@ -78,5 +78,8 @@ alias grep='grep --color'                     # show differences in color
 #--------------------------------------------------
 # Functions
 #--------------------------------------------------
-
+function svndiff() \
+{ \
+    svn diff $* | view -c 'set ft=diff' -;
+}
 
