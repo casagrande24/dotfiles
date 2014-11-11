@@ -42,6 +42,7 @@ complete -d cd
 complete -c which man
 complete -f wm
 complete -A hostname ping telnet ftp
+complete -f -A hostname ssh scp
 complete -f -X "*.obj" vi view
 complete -f -W "--line-buffered" grep fgrep
 
