@@ -2,5 +2,7 @@
 
 RCDIR=$RCROOT/local
 
-#. $RCDIR/general.sh >& /dev/null
+. $RCDIR/general.sh >& /dev/null
+. $RCDIR/android.sh >& /dev/null
+. $RCDIR/java.sh >& /dev/null
 

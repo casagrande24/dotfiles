@@ -61,6 +61,8 @@ export HISTIGNORE="[   ]*:&:bg:fg:exit:ls"
 # Whenever displaying the prompt, write the previous line to disk
 # export PROMPT_COMMAND="history -a"
 
+# Set timestamp.
+export HISTTIMEFORMAT='[%F %T] '
 
 #--------------------------------------------------
 # Aliases

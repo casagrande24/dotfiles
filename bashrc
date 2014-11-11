@@ -2,6 +2,8 @@
 
 RCROOT=~/.dotfiles
 
+export TERM=xterm
+
 # Load global settings
 source $RCROOT/globalrc
 

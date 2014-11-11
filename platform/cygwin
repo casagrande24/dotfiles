@@ -68,7 +68,7 @@ alias temp='cd /cygdrive/c/Temp'
 function w() { cygpath -w $1; }
 
 function terapad() { \
-  cygstart "/cygdrive/c/Program Files/TeraPad/TeraPad.exe" `cygpath -aw $*`;
+    cygstart "/cygdrive/c/Program Files (x86)/TeraPad/TeraPad.exe" `cygpath -aw $*`;
 }
 
 function vivi() { \
