@@ -3,6 +3,14 @@
 	email = toki.ohya@gmail.com
 [credential]
 	helper = cache --timeout=3600
+[color]
+	ui = true
+[core]
+	autocrlf = false
+	safecrlf = true
+	eol = lf
+[push]
+	default = simple
 [alias]
     co = checkout
     ci = commit
