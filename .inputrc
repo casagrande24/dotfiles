@@ -66,3 +66,14 @@ set output-meta on
   # a history expansion in the line
   #Space: magic-space
 #$endif
+
+# --------------------------------------------------
+# my key bindings
+# --------------------------------------------------
+
+# Ctrl+n/p: 現在行の文字列で履歴検索に変更
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+
+# Ctrl+u: undo に変更
+"\C-u": undo

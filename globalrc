@@ -88,6 +88,16 @@ alias du='du -h'
 alias grep='grep --color'                     # show differences in color
 
 #--------------------------------------------------
+# Key Bindings
+#--------------------------------------------------
+# CTRL-L + CTRL-L で ls -l
+bind -x '"\C-l\C-l": ls -l'
+# CTRL-L + CTRL-A で ls -lA
+bind -x '"\C-l\C-a": ls -lA'
+# CTRL-L + CTRL-T で ls -trl
+bind -x '"\C-l\C-t": ls -trl'
+
+#--------------------------------------------------
 # Functions
 #--------------------------------------------------
 function svndiff() \
