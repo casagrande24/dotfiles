@@ -3,11 +3,20 @@
 #--------------------------------------------------
 # Environment Variables
 #--------------------------------------------------
+export EDITOR=vim
 
 #--------------------------------------------------
 # Prompt setting
 #--------------------------------------------------
 PS1='\[\e]0;\w\a\]\n\[\e[1;34m\]\u@\h \[\e[35m\]\w\[\e[0m\]\n\$ '
+
+#--------------------------------------------------
+# Terminal settings
+#--------------------------------------------------
+# disable Ctrl+s
+stty stop undef
+# disable Ctrl+q
+stty start undef
 
 #--------------------------------------------------
 # Shell Options
@@ -16,7 +25,6 @@ PS1='\[\e]0;\w\a\]\n\[\e[1;34m\]\u@\h \[\e[35m\]\w\[\e[0m\]\n\$ '
 # When changing directory small typos can be ignored by bash
 # for example, cd /vr/lgo/apaache would find /var/log/apache
 shopt -s cdspell
-#set -o vi
 
 #--------------------------------------------------
 # Completion options
