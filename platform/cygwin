@@ -68,10 +68,10 @@ alias temp='cd /cygdrive/c/Temp'
 function w() { cygpath -w $1; }
 
 function terapad() { \
-    cygstart "/cygdrive/c/Program Files (x86)/TeraPad/TeraPad.exe" $(cygpath -aw $*);
+    cygstart "/cygdrive/c/Program Files (x86)/TeraPad/TeraPad.exe" $(cygpath -awi $*);
 }
 
 function gvim() { \
-  HOME=$HOMEPATH "/cygdrive/c/Program Files/vim/gvim" $(cygpath -aw $*);
+  HOME=$HOMEPATH cygstart "/cygdrive/c/Program Files/vim/gvim" -u "$HOMEPATH\_vimrc" $(cygpath -awi $*)
 }
 
