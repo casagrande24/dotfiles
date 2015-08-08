@@ -12,8 +12,8 @@ unset TEMP
 
 # Alternatively, set them to the Cygwin temporary directory
 # or to any other tmp directory of your choice
-# export TMP=/tmp
-# export TEMP=/tmp
+export TMP=/var/tmp
+export TEMP=/var/tmp
 
 # Or use TMPDIR instead
 # export TMPDIR=/tmp
