@@ -30,6 +30,7 @@ export GIT_EDITOR="mvim -f"
 # Aliases
 #--------------------------------------------------
 alias ls='ls -Ghp'
+alias vi='/Applications/MacVim.app/Contents/MacOS/vim'
 
 #--------------------------------------------------
 # Functions
