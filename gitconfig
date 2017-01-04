@@ -1,14 +1,15 @@
 [user]
-	name = Tokikazu Ohya
-	email = toki.ohya@gmail.com
+	name = aTokikazuOhya
+	email = ohya@aplix.co.jp
 [credential]
 	helper = cache --timeout=3600
 [color]
 	ui = true
 [core]
-	autocrlf = false
+	autocrlf = input
 	safecrlf = true
 	eol = lf
+	excludesfile = /Users/ohya/.gitignore_global
 [push]
 	default = simple
 [alias]
@@ -20,3 +21,9 @@
     type = cat-file -t
     dump = cat-file -p
     pull-dry-run = !"git fetch origin; B=$(git rev-parse --abbrev-ref HEAD); git diff --stat --summary ${B}..origin/${B}"
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
