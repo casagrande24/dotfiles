@@ -17,6 +17,7 @@
     ci = commit
     st = status
     br = branch
+    hash = show -s --format=%h
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     type = cat-file -t
     dump = cat-file -p
