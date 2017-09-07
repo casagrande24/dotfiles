@@ -56,7 +56,7 @@ complete -f -X "*.obj" vi view
 complete -f -W "--line-buffered" grep fgrep
 
 HOSTFILE=~/.hosts
-FIGNORE=.svn:.swp:.swo
+FIGNORE=.svn:.swp:.swo:.DS_Store
 
 #--------------------------------------------------
 # History Options
