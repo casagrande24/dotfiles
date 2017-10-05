@@ -6,7 +6,7 @@
 [color]
 	ui = true
 [core]
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
 	eol = lf
 	excludesfile = /Users/ohya/.gitignore_global
