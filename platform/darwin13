@@ -31,6 +31,9 @@ export GIT_EDITOR="mvim -f"
 #--------------------------------------------------
 alias ls='ls -Ghp'
 alias vi='/Applications/MacVim.app/Contents/MacOS/vim'
+alias mode="stat -f '%A %N'"
+alias en="trans -b :en"
+alias jp="trans -b :ja"
 
 #--------------------------------------------------
 # Functions
