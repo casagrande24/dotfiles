@@ -105,3 +105,8 @@ function svndiff() \
     svn diff $* | view -c 'set ft=diff' -;
 }
 
+# ディレクトリまたは実行可能ファイルが 755 に、それ以外が 644
+function chmod_special() \
+{ \
+  chmod -R a=rX,u+w $*;
+}
