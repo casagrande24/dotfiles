@@ -5,4 +5,4 @@ RCDIR=$RCROOT/parts
 #. $RCDIR/dev.sh >& /dev/null
 . $RCDIR/android.sh >& /dev/null
 
-alias mysql='mysql --protocol=tcp -u root'
+#alias mysql='mysql --protocol=tcp -u root'
