@@ -21,6 +21,12 @@ export GIT_EDITOR="mvim -f"
 #--------------------------------------------------
 # Completion options
 #--------------------------------------------------
+BREW_PREFIX=$(brew --prefix)
+if [ -d $BREW_PREFIX/etc/bash_completion.d ]; then
+  for f in $BREW_PREFIX/etc/bash_completion.d/*;
+    do source $f;
+  done
+fi
 
 #--------------------------------------------------
 # History Options
