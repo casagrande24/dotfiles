@@ -48,7 +48,8 @@ shopt -s cdspell
 # esac
 
 complete -d cd
-complete -c which man
+complete -c which type
+complete -c -f man
 complete -f wm
 complete -A hostname ping telnet ftp
 complete -f -A hostname ssh scp
