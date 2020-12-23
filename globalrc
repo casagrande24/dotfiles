@@ -87,6 +87,7 @@ alias du='du -h'
 
 # Misc
 alias grep='grep --color'                     # show differences in color
+alias c=clear
 
 #--------------------------------------------------
 # Key Bindings
