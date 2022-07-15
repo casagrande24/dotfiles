@@ -2,7 +2,7 @@
 	name = aTokikazuOhya
 	email = ohya@aplix.co.jp
 [credential]
-	helper = cache --timeout=3600
+	helper = osxkeychain
 [color]
 	ui = true
 [core]
@@ -13,13 +13,31 @@
 	excludesfile = /Users/ohya/.gitignore_global
 [push]
 	default = simple
+[pull]
+	rebase = true
 [alias]
 	co = checkout
 	ci = commit
 	st = status
 	br = branch
-	hash = show -s --format=%h
+    #hash = show -s --format=%h
+	hash = rev-parse --short=8 HEAD
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+    # 派生元ブランチ名を表示 (万能ではない模様)
+    parent = !git show-branch | grep '*' | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -1 | awk -F'[]~^[]' '{print $2}'
+
+    # git brlog [parent]
+    #   派生元ブランチに含まれないコミットログを表示
+    #   派生元ブランチの判定に失敗することがあるため引数でも指定可
+    brlog = !git log --decorate --date=iso --pretty=format:'%C(yellow)%h %C(green)%cd %cn %C(reset) %s' --abbrev-commit --no-merges --first-parent ${1-$(git parent)}..
+    # git brlog <base branch>..<target branch>
+    #brlog = log --decorate --date=iso --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset) %s' --abbrev-commit --no-merges --first-parent
+
+	# git pushlog
+	#   未pushのログを表示
+	pushlog = log @{push}..
+
 	type = cat-file -t
 	dump = cat-file -p
 	pull-dry-run = !"git fetch origin; B=$(git rev-parse --abbrev-ref HEAD); git diff --stat --summary ${B}..origin/${B}"
@@ -31,3 +49,5 @@
 	trustExitCode = true
 [http]
 	postBuffer = 96M
+
+# vim: set ft=gitconfig:
